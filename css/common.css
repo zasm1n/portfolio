@@ -1,0 +1,148 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@font-face {
+    font-family: 'IM_Hyemin-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 
+font-family: 'IM_Hyemin-Regular';
+font-family: 'IM_Hyemin-Bold';
+font-family: 'Mochiy Pop P One', sans-serif;
+ */
+body {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    /* -ms-overflow-style: none;
+    scrollbar-width: none; */
+}
+/* body::-webkit-scrollbar {display: none;} */
+::-webkit-scrollbar {
+    width: 7px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #f88b59;
+    border-radius: 100vw;
+}
+
+.con {width: 1280px; margin: 0 auto;}
+
+p,span,em,h1,h2,h3,h4,h5 {cursor: default;}
+
+.menu {
+    position: fixed; left: -250px; top: 0;
+    width: 250px; height: 100%;
+    background-color: #222;
+    color: white;
+    z-index: 100;
+}
+.menu .fa-x {
+    margin-top: 12px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.menu .fa-x:hover {color: rgba(255, 255, 255, 0.5);}
+.menu ul {
+    width: 100%;
+    height: 22%;
+}
+.menu ul li {
+    height: 25%;
+    margin-left: 50px;
+}
+.menu ul li a:hover {color: #fff9b6;}
+.md-background {
+    position: fixed; left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: #222;
+    opacity: 0.5;
+    z-index: 10;
+    display: none;
+}
+
+header {
+    width: 100%; 
+    height: 50px; 
+    background: transparent; 
+    color: white; 
+    display: flex; flex-wrap: wrap; 
+    position: fixed; top: 0; left: 0;
+    transition: all 0.3s;
+    z-index: 100;
+}
+header .h_left {width: 50%; height: 100%; display: flex;}
+header .h_left .fa-bars {
+    font-size: 26px; line-height: 50px; 
+    margin-left: 20px; 
+    cursor: pointer; 
+    display: none; 
+    transition: all 0.3s;
+}
+header .h_left .fa-bars:hover {color: rgba(255, 255, 255, 0.5);}
+header .h_left h1 { 
+    font-size: 26px; line-height: 48px; 
+    margin-left: 20px;
+}
+header .h_left h1 span {color: #f8ec59; cursor: pointer;}
+header .h_right {width: 50%; height: 100%; display: flex; flex-direction: row-reverse;}
+header .h_right nav {width: 600px;}
+header .h_right nav ul.gnb {width: 100%; height: 100%; display: flex; flex-wrap: wrap;}
+header .h_right nav ul.gnb li {width: 25%; height: 100%; text-align: center; line-height: 48px;}
+header .h_right nav ul.gnb li a {transition: all 0.2s;}
+header .h_right nav ul.gnb li a:hover {color: #fff9b6;}
+
+.background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    position: relative;
+}
+.background h1 {
+    color: white;
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background: #222;
+    color: white;
+    display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap; flex-direction: column;
+    font-size: 10px; text-align: center;
+}
+footer p {letter-spacing: 2px; word-break: keep-all;}
+
+.top_btn {
+    box-sizing: border-box; border: 2px solid #f88b59; border-radius: 50%;
+    background-color: #f8ec59;
+    width: 50px; height: 50px;
+    font-size: 12px;
+    position: fixed; bottom: 5%; right: 5%;
+    display: flex; justify-content: center; align-items: center;
+    cursor: pointer;
+}
+.top_btn p {
+    cursor: pointer;
+}
+
+@media screen and (max-width:1280px) {
+    .con {width: 100%;}
+}
+
+@media screen and (max-width:768px) {
+    header .h_left .fa-bars {display: block;}
+    header .h_right {display: none;}
+}
